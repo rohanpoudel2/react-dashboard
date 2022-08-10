@@ -12,6 +12,8 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
 
+import { Link } from 'react-router-dom';
+
 const SideBar = () => {
   return (
     <div className="sidebar">
@@ -19,10 +21,12 @@ const SideBar = () => {
         <div className="menu">
           <h3 className="title">Dashboard</h3>
           <ul className="list">
-            <li className="listItem active">
-              <LineStyleIcon className='icon' />
-              Home
-            </li>
+            <Link to='/'>
+              <li className="listItem active">
+                <LineStyleIcon className='icon' />
+                Home
+              </li>
+            </Link>
             <li className="listItem">
               <TimelineIcon className='icon' />
               Analytics
@@ -34,14 +38,18 @@ const SideBar = () => {
           </ul>
           <h3 className="title">Quick Menu</h3>
           <ul className="list">
-            <li className="listItem">
-              <PersonOutlineIcon className='icon' />
-              Users
-            </li>
-            <li className="listItem">
-              <StorefrontIcon className='icon' />
-              Products
-            </li>
+            <Link to='/users'>
+              <li className="listItem">
+                <PersonOutlineIcon className='icon' />
+                Users
+              </li>
+            </Link>
+            <Link to='/products'>
+              <li className="listItem">
+                <StorefrontIcon className='icon' />
+                Products
+              </li>
+            </Link>
             <li className="listItem">
               <AttachMoneyIcon className='icon' />
               Transactions
